@@ -57,7 +57,7 @@
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
 							<i class="fa fa-bars"></i>
 						</button>
-						<a class="navbar-brand" href="index.html">Logo<span>Logo</span></a>
+						<a class="navbar-brand" href="{% url 'index' %}">Logo<span>Logo</span></a>
 
 					</div><!--/.navbar-header-->
 					<!-- End Header Navigation -->
@@ -71,7 +71,7 @@
 							<li class="scroll"><a href="#aboutus">About Us</a></li>
 							<li class="scroll"><a href="#contact">contact</a></li>
 							<li class="scroll"><a href="career.html" style="color: #0EF6CC;">Career</a></li>
-							<li class="scroll"><button class="navbar-btn"type="button">Login<span>/Register</span></button></li>
+							<a href="{% url 'login' %}"><li><button class="navbar-btn"type="button">Login<span>/Register</span></button></li></a>
 						</ul>
 					</div><!-- /.navbar-collapse -->
 				</div><!--/.container-->
