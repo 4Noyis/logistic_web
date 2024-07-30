@@ -40,6 +40,7 @@ class Cargo(models.Model):
     image = models.ImageField(upload_to='cargo_images',blank=True,null=True)
 
 class Bill(models.Model): # fatura bilgiler
+    order = models.OneToOneField(Order,on_delete=models.PROTECT)
     company_name = models.CharField(max_length=200)
     address = models.TextField()
     name = models.CharField(max_length=200)

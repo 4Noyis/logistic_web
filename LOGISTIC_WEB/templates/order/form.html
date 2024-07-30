@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div class="container">
+    <form method="post">
+        {% csrf_token %}
+        {{Order_form.as_p}}
+        {{Receiving_location_form.as_p}}
+        {{Destination_location_form.as_p}}
+        {{Vehicle_form.as_p}}
+        {{Cargo_form.as_p}}
+        {{Bill_form.as_p}}
+        <input type="submit" name="" value="Save">
+    </form>
+</div> 
+</body>
+</html>
+
