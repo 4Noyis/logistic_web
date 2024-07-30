@@ -10,24 +10,24 @@ class Order_form(forms.ModelForm):
 class Receiving_location_form(forms.ModelForm):
     class Meta():
         model = Receiving_location
-        fields = '__all__'
+        fields = ('company_name','company_number','address','pickup_date')
 
 class Destination_location_form(forms.ModelForm):
     class Meta():
         model = Destination_location
-        fields = '__all__'
+        fields = ('company_name','company_number','address','pickup_date')
 
 class Vehicle_form(forms.ModelForm):
     class Meta():
         model = Vehicle
-        fields = '__all__'
+        fields = ('type','price_km','max_weight','storage_height','storage_width','storage_length')
 
 class Cargo_form(forms.ModelForm):
     class Meta():
         model = Cargo
-        fields = '__all__'
+        fields = ('type','weight','height','width','length','image')
 
 class Bill_form(forms.ModelForm):
     class Meta():
         model = Bill
-        fields = '__all__'
+        fields = ('company_name','address','name','surname','email','satis_vergisi_kimligi')
