@@ -1,11 +1,9 @@
 from django.db import models
 from django.utils import timezone
 
-# Create your models here.
-
 class Order(models.Model):
     customer = models.ForeignKey("auth.User", on_delete=models.CASCADE)
-    status = models.CharField(max_length=30)
+    status = models.CharField(max_length=30) # Sipariş aktif,pasif,tamamlanmış,iptal...
     price = models.IntegerField()
     creation_date = models.DateTimeField(default=timezone.now)
 
