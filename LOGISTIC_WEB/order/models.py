@@ -1,7 +1,9 @@
 from django.db import models
 from django.utils import timezone
+import uuid
 
 class Order(models.Model):
+    order_code = models.CharField(max_length=10, default=uuid.uuid4, unique=True, editable=False)
     customer = models.ForeignKey("auth.User", on_delete=models.CASCADE)
     status = models.CharField(max_length=30) # Sipariş aktif,pasif,tamamlanmış,iptal...
     price = models.IntegerField()
