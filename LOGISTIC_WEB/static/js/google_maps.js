@@ -1,3 +1,10 @@
+// Insert map datas from django
+const location_data = JSON.parse(document.getElementById('map-location').textContent);
+const location_lat = location_data[0]['lat'];
+const location_lng = location_data[0]['lng'];
+
+console.log(location_lat+" , "+location_lng);
+
 // Initialize and add the map
 let map;
 
