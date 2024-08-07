@@ -1,16 +1,14 @@
 // Insert map datas from django
-const location_data = JSON.parse(document.getElementById('map-location').textContent);
+const location_data = JSON.parse(document.getElementById('map-data').textContent);
 const location_lat = location_data[0]['lat'];
 const location_lng = location_data[0]['lng'];
-
-console.log(location_lat+" , "+location_lng);
 
 // Initialize and add the map
 let map;
 
 async function initMap() {
   // The location of Uluru
-  const position = { lat: -25.344, lng: 131.031 };
+  const position = { lat: location_lat, lng: location_lng };
   // Request needed libraries.
   //@ts-ignore
   const { Map } = await google.maps.importLibrary("maps");

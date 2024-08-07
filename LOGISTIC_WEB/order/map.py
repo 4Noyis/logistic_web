@@ -26,7 +26,7 @@ addressvalidation_result =  gmaps.addressvalidation(['1600 Amphitheatre Pk'],
                                                     enableUspsCass=True)
 
 # Find place
-find_place = gmaps.find_place(input='Berlin',input_type='textquery')['candidates'][0]['place_id']
+find_place = gmaps.find_place(input='Kocaeli Izmit Ncity AVM',input_type='textquery')['candidates'][0]['place_id']
 place_info = geocode_result = gmaps.geocode(place_id=find_place)
 place_location = place_info[0]['geometry']['location']
 print(place_location)
