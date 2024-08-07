@@ -9,7 +9,7 @@ def LoginView(request):
 
 def MapView(request):
     context = {
-        'list':[{'lat':map.lat,
+        'map_data':[{'lat':map.lat,
         'lng':map.lng}]
     }
     return render(request,'map_test.html',context=context)
