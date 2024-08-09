@@ -1,16 +1,22 @@
 import googlemaps
+from google.maps import routing_v2
 from datetime import datetime
 
 gmaps = googlemaps.Client(key='AIzaSyCylRnlEZdmLKjm1NzXZ5nO4RzvyNifhpk')
 
 # Find place
-find_place = gmaps.find_place(input='Kocaeli Izmit Ncity AVM',input_type='textquery')['candidates'][0]['place_id']
-place_info = geocode_result = gmaps.geocode(place_id=find_place)
-place_location = place_info[0]['geometry']['location']
-print(place_location)
+def find_location_place(location):
+    find_place = gmaps.find_place(input=location,input_type='textquery')['candidates'][0]['place_id']
+    place_info = geocode_result = gmaps.geocode(place_id=find_place)
+    place_location = place_info[0]['geometry']['location']
+    print(place_location)
+    
+    lat = place_location['lat']
+    lng = place_location['lng']
 
-lat = place_location['lat']
-lng = place_location['lng']
+    return lat,lng
+
+# ROUTİNG
 
 
 """

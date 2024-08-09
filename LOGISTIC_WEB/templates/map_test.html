@@ -1,29 +1,37 @@
 {% include "included/layout.html" %}
 {% load static %}
 {% block body %}
-  <h3>My Google Maps Demo</h3>
-    
-  <div id="map"></div>
-
-  <h1>{{lat}}</h1>
+<div id="floating-panel">
+  <b>Start: </b>
+  <select id="start">
+    <option value="chicago, il">Chicago</option>
+    <option value="st louis, mo">St Louis</option>
+    <option value="joplin, mo">Joplin, MO</option>
+    <option value="oklahoma city, ok">Oklahoma City</option>
+    <option value="amarillo, tx">Amarillo</option>
+    <option value="gallup, nm">Gallup, NM</option>
+    <option value="flagstaff, az">Flagstaff, AZ</option>
+    <option value="winona, az">Winona</option>
+    <option value="kingman, az">Kingman</option>
+    <option value="barstow, ca">Barstow</option>
+    <option value="san bernardino, ca">San Bernardino</option>
+    <option value="los angeles, ca">Los Angeles</option>
+  </select>
+  <b>End: </b>
+  <select id="end">
+    <option value="chicago, il">Chicago</option>
+    <option value="st louis, mo">St Louis</option>
+    <option value="joplin, mo">Joplin, MO</option>
+    <option value="oklahoma city, ok">Oklahoma City</option>
+    <option value="amarillo, tx">Amarillo</option>
+    <option value="gallup, nm">Gallup, NM</option>
+    <option value="flagstaff, az">Flagstaff, AZ</option>
+    <option value="winona, az">Winona</option>
+    <option value="kingman, az">Kingman</option>
+    <option value="barstow, ca">Barstow</option>
+    <option value="san bernardino, ca">San Bernardino</option>
+    <option value="los angeles, ca">Los Angeles</option>
+  </select>
+</div>
+<div id="map"></div>
 {% endblock body %}
-<!--
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Add Map</title>
-
-    <link rel="stylesheet" type="text/css" href="../static/css/style2.css" />
-    <script type="module" src="../static/js/script.js"></script>
-  </head>
-  <body>
-    <h3>My Google Maps Demo</h3>
-  
-    <div id="map"></div>
-
- 
-    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
-        ({key: "AIzaSyCylRnlEZdmLKjm1NzXZ5nO4RzvyNifhpk", v: "weekly"});</script>
-  </body>
-</html>
--->
