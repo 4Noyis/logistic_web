@@ -7,7 +7,45 @@ const location_lng = location_data[0]['lng'];
 let map;
 
 async function initMap() {
-  // The location of Uluru
+
+  const directionsService = new google.maps.DirectionsService();
+  const directionsRenderer = new google.maps.DirectionsRenderer();
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 7,
+    center: { lat: 41.85, lng: -87.65 },
+  });
+
+  directionsRenderer.setMap(map);
+
+  const onChangeHandler = function () {
+    calculateAndDisplayRoute(directionsService, directionsRenderer);
+  };
+
+  document.getElementById("start").addEventListener("change", onChangeHandler);
+  document.getElementById("end").addEventListener("change", onChangeHandler);
+}
+
+function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+  directionsService
+    .route({
+      origin: {
+        query: document.getElementById("start").value,
+      },
+      destination: {
+        query: document.getElementById("end").value,
+      },
+      travelMode: google.maps.TravelMode.DRIVING,
+    })
+    .then((response) => {
+      directionsRenderer.setDirections(response);
+    })
+    .catch((e) => window.alert("Directions request failed due to " + status));
+}
+
+window.initMap = initMap;
+
+/* ********* Simple Render for Selected Location *********
+  // The location of Selected on map.py
   const position = { lat: location_lat, lng: location_lng };
   // Request needed libraries.
   //@ts-ignore
@@ -16,7 +54,7 @@ async function initMap() {
 
   // The map, centered at Uluru
   map = new Map(document.getElementById("map"), {
-    zoom: 4,
+    zoom: 15,
     center: position,
     mapId: "DEMO_MAP_ID",
   });
@@ -25,8 +63,9 @@ async function initMap() {
   const marker = new AdvancedMarkerElement({
     map: map,
     position: position,
-    title: "Uluru",
+    title: "Selected_location",
   });
-}
-
+  
 initMap();
+  
+********* Simple Render for Selected Location ********* */
