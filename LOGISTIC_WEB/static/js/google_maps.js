@@ -35,6 +35,7 @@ function calculateAndDisplayRoute(directionsService, directionsRenderer) {
         query: document.getElementById("end").value,
       },
       travelMode: google.maps.TravelMode.DRIVING,
+      avoidHighways: true,
     })
     .then((response) => {
       directionsRenderer.setDirections(response);
