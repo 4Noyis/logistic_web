@@ -1025,3 +1025,28 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     line-height: 30px;
     padding-left: 10px;
   }
+
+  /* MAP SEARCH */
+
+  #place-autocomplete-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 10px;
+    padding: 5px;
+    font-family: Roboto, sans-serif;
+    font-size: large;
+    font-weight: bold;
+  }
+  
+  gmp-place-autocomplete {
+    width: 300px;
+  }
+  
+  #infowindow-content .title {
+    font-weight: bold;
+  }
+  
+  #map #infowindow-content {
+    display: inline;
+  }
