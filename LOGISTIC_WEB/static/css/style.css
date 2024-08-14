@@ -1007,46 +1007,70 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
  * Always set the map height explicitly to define the size of the div element
  * that contains the map. 
  */
- #map {
-    height: 500px;
+#map {
+height: 500px;
+width: 100%;
+}
+
+#floating-panel {
+position: absolute;
+top: 10px;
+left: 50%;
+z-index: 5;
+background-color: #fff;
+padding: 5px;
+border: 1px solid #999;
+text-align: center;
+font-family: "Roboto", "sans-serif";
+line-height: 30px;
+padding-left: 10px;
+}
+
+/* MAP SEARCH */
+
+#place-autocomplete-card {
+background-color: #fff;
+border-radius: 5px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+margin: 10px;
+padding: 5px;
+font-family: Roboto, sans-serif;
+font-size: large;
+font-weight: bold;
+}
+
+gmp-place-autocomplete {
+width: 300px;
+}
+
+#infowindow-content .title {
+font-weight: bold;
+}
+
+#map #infowindow-content {
+display: inline;
+}
+
+.map-input{
     width: 100%;
-  }
-  
-  #floating-panel {
-    position: absolute;
-    top: 10px;
-    left: 25%;
-    z-index: 5;
-    background-color: #fff;
-    padding: 5px;
-    border: 1px solid #999;
-    text-align: center;
-    font-family: "Roboto", "sans-serif";
-    line-height: 30px;
-    padding-left: 10px;
-  }
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    gap: 10px;
+}
 
-  /* MAP SEARCH */
+.map-input button{
+    background-color: gainsboro;
+    height: 90%;
+    width: 80%;
+}
 
-  #place-autocomplete-card {
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin: 10px;
-    padding: 5px;
-    font-family: Roboto, sans-serif;
-    font-size: large;
-    font-weight: bold;
-  }
-  
-  gmp-place-autocomplete {
-    width: 300px;
-  }
-  
-  #infowindow-content .title {
-    font-weight: bold;
-  }
-  
-  #map #infowindow-content {
-    display: inline;
-  }
+.map-input button:hover{
+    background-color: gray;
+}
+
+#confirm-btn{
+    background-color: green;
+    color: whitesmoke;    
+}

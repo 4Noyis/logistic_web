@@ -2,42 +2,16 @@
 {% load static %}
 {% block body %}
 <div class="map-div">
-  <div id="floating-panel">
-    <b>Start: </b>
-    <select id="start">
-      <option value="chicago, il">Chicago</option>
-      <option value="st louis, mo">St Louis</option>
-      <option value="joplin, mo">Joplin, MO</option>
-      <option value="oklahoma city, ok">Oklahoma City</option>
-      <option value="amarillo, tx">Amarillo</option>
-      <option value="gallup, nm">Gallup, NM</option>
-      <option value="flagstaff, az">Flagstaff, AZ</option>
-      <option value="winona, az">Winona</option>
-      <option value="kingman, az">Kingman</option>
-      <option value="barstow, ca">Barstow</option>
-      <option value="san bernardino, ca">San Bernardino</option>
-      <option value="los angeles, ca">Los Angeles</option>
-      <option value="izmit kozluk mahallesi ege market, tr">Ege market</option>
-    </select>
-    <b>End: </b>
-    <select id="end">
-      <option value="chicago, il">Chicago</option>
-      <option value="st louis, mo">St Louis</option>
-      <option value="joplin, mo">Joplin, MO</option>
-      <option value="oklahoma city, ok">Oklahoma City</option>
-      <option value="amarillo, tx">Amarillo</option>
-      <option value="gallup, nm">Gallup, NM</option>
-      <option value="flagstaff, az">Flagstaff, AZ</option>
-      <option value="winona, az">Winona</option>
-      <option value="kingman, az">Kingman</option>
-      <option value="barstow, ca">Barstow</option>
-      <option value="san bernardino, ca">San Bernardino</option>
-      <option value="los angeles, ca">Los Angeles</option>
-      <option value="bursa otobus terminali, tr">bursa toto</option>
-    </select>
-  </div>
   <div class="place-autocomplete-card" id="place-autocomplete-card">
-    <p>Search for a place here:</p>
+    <p style="color: black;">Search for a place here:</p>
+    <div class="map-input">
+      <button id="start-btn">Start</button>
+      <button id="end-btn">End</button>
+      <div class="map-input">
+        <button id="confirm-btn">Confirm</button>
+        <button id="reset-btn">Reset</button>
+      </div>
+    </div>
   </div>
   <div id="map"></div>
 </div>
